@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>A Bootstrapping Approach to Assessing the Bias of Facebook’s Graph API</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section data-background="background.jpg">
+
+                <p>
+  			    <h3 style = "background-color:rgba(0,0,0,0.7);">A Bootstrapping Approach to Assessing the Bias of Facebook’s Graph API</h3>
+                <br>
+                <h3 style = "background-color:rgba(0,0,0,0.7);">Justin Chun-ting Ho</h3>
+                <h4 style = "background-color:rgba(0,0,0,0.7);">University of Edinburgh</h4>
+  			    </p>
+  			  </section>
+              <section data-background="background.jpg">
+                <h2  style = "background-color:rgba(0,0,0,0.7);">Background</h2>
+              </section>
+              <section data-background="background.jpg">
+                  <div  style = "background-color:rgba(0,0,0,0.7);">
+                <h3>Changes in Graph API</h2>
+                    <ul>
+                        <li>7 November 2017, <br>Facebook introduced a new limitation</li>
+                        <li>The API will only return a maximum of <br>“600 ranked, published posts per year”</li>
+                        <li>How these posts are selected is currently unknown</li>
+                    </ul>
+                </div>
+              </section>
+              <section>
+                <h2>Bootstrapping Approach</h2>
+              </section>
+              <section>
+                  <img src="fbbias.png"><br>
+              </section>
+              <section>
+                <h2>Post Type</h2>
+              </section>
+              <section data-background="post_type.png" data-background-size="100%">
+              </section>
+              <section>
+                <h2>User Engagement Metris</h2>
+              </section>
+              <section data-background="post_metrics.png" data-background-size="100%">
+              </section>
+              <section>
+                <h2>Top Terms</h2>
+              </section>
+              <section data-background="kendall.png" data-background-size="100%">
+              </section>
+              <section>
+                <h2>Reverse Engineering the Ranking Method</h2>
+              </section>
+              <section data-background="logistic.png" data-background-size="100%">
+              </section>
+              <section>
+                  <h4>Sentiment and Emotion Scores</h4>
+                  <img src="sentiment.png"><br>
+              </section>
+              <section>
+              <section>
+                <h3>Findings</h2>
+                    <ul>
+                        <li>Photo and Video over-represented; Link under-represented</li>
+                        <li>Over-representation of posts with high Shares and Likes on Comments, but not Likes and Comments</li>
+                        <li>Bias in top terms</li>
+                        <li>Bias in emotional words usage</li>
+                    </ul>
+              </section>
+              <section>
+                <h3>Implications</h2>
+                    <ul>
+                        <li>Under-representation of Link posts means that a significant amount of link-sharing activities would become invisible</li>
+                        <li>Highly commented and liked posts might not be selected due to the effect of other features</li>
+                        <li>Potential bias in text models</li>
+                        <li>The new API tends to return posts with more emotional texts</li>
+                    </ul>
+              </section>
+          </section>
+              <section>
+                  <div>
+                  <h2>Thank You!</h2>
+                <h4>Twitter: @justin_ct_ho<br>Github: justinchuntingho<br>Email: Justin.Ho@ed.ac.uk</h4>
+              </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                slideNumber: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
