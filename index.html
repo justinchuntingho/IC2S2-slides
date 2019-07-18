@@ -36,9 +36,6 @@
 
   			  </section>
               <section data-background="background.jpg">
-                <h2  style = "background-color:rgba(0,0,0,0.7);">Background</h2>
-              </section>
-              <section data-background="background.jpg">
                   <div  style = "background-color:rgba(0,0,0,0.7);">
                 <h3>Changes in Graph API</h2>
                     <ul>
@@ -49,6 +46,10 @@
                 </div>
               </section>
               <section>
+                <h2>Is it biased?</h2>
+                <div class="fragment"><h2 class="highlight-red">It is.</h2></div>
+              </section>
+              <section>
                 <h2>The Data</h2>
               </section>
               <section>
@@ -57,8 +58,9 @@
                       <li>Scottish National Party’s official Facebook page</li>
                       <li>All posts between 1 January - 31 December 2016</li>
                       <li>Two Rounds of Data Collection: <br>
-                          7 May 2017 (1031 posts) & 6 April 2018 (598 posts)</li>
-                      <li>Extracted using Netvizz (Rieder 2013)</li>
+                          7 May 2017 (1031 posts) & <br>6 April 2018 (598 posts)</li>
+                      <li>Extracted using Netvizz</li>
+                      <small>(Rieder 2013)</small>
                   </ul>
               </section>
               <section>
@@ -73,12 +75,21 @@
               <section data-background="post_type.png" data-background-size="100%">
               </section>
               <section>
-                <h2>User Engagement Metris</h2>
+                <h2>User Engagement</h2>
               </section>
               <section data-background="post_metrics.png" data-background-size="100%">
               </section>
               <section>
                 <h2>Top Terms</h2>
+              </section>
+              <section>
+                  <h3>Top Terms Analysis</h3>
+                  <ul>
+                      <li>Kendall's Tau</li>
+                      <li>Compare: Full Data vs Bootstrap Samples &<br>Full Data vs Partial Samples</li>
+                      <li>Top terms (n) between 10 and 1500 in steps of 10</li>
+                      <small>(Morstatter et al. 2013)</small>
+                  </ul>
               </section>
               <section data-background="kendall.png" data-background-size="100%">
               </section>
@@ -92,30 +103,37 @@
                   Full model: <img class="plain" src="fullmodel.png"><br></div>
 
             </section>
+            <section>
+              <h2>Wait, why Logistic Regression?</h2>
+            </section>
+            <section>
               <section data-background="logistic.png" data-background-size="100%">
               </section>
               <section>
-              <section>
-                <h3>Findings</h2>
-                    <ul>
-                        <li>Photo and Video over-represented; Link under-represented</li>
-                        <li>Over-representation of posts with high Shares and Likes on Comments, but not Likes and Comments</li>
-                        <li>Bias in top terms</li>
-                    </ul>
-              </section>
-              <section>
-                <h3>Implications</h2>
-                    <ul>
-                        <li>Under-representation of Link posts means that a significant amount of link-sharing activities would become invisible</li>
-                        <li>Highly commented and liked posts might not be selected due to the effect of other features</li>
-                        <li>Potential bias in text models</li>
-                    </ul>
-              </section>
-              <section>
-                  <h4>Sentiment and Emotion Scores</h4>
-                  <img src="sentiment.png"><br>
+                  <h4>Confusion Matrix</h4>
+                  <img src="confusionmat.png"><br>
               </section>
           </section>
+          <section>
+              <h4>Sentiment and Emotion Scores</h4>
+              <img src="sentiment.png"><br>
+          </section>
+          <section>
+              <h3>Is it the end of the world?</h3>
+          </section>
+              <section>
+                <h3>It depends...</h2>
+                    <ul>
+                        <span class="fragment"><li>If you research on information diffusion...
+                            <br><span class="fragment"><span class="highlight-red">Link under-represented</li>
+                        <span class="fragment"><li>If you analyise user engagements...
+                            <br><span class="fragment"><span class="highlight-red">Misrepresentation of user engagements</li>
+                        <span class="fragment"><li>If you analyise post texts...
+                            <br><span class="fragment"><span class="highlight-red">Bias in top terms</li>
+                        <span class="fragment"><li>If you research on public opinion...
+                            <br><span class="fragment"><span class="highlight-red">Over-representation of sentimental terms</li>
+                    </ul>
+              </section>
               <section>
                   <div>
                   <h2>Thank You!</h2>
